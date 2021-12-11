@@ -1,6 +1,6 @@
 <?php
 
-namespace Bimacoding\Menu\Models;
+namespace Erendi\Menu\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -21,6 +21,6 @@ class Menus extends Model
 
     public function items()
     {
-        return $this->hasMany('Bimacoding\Menu\Models\MenuItems', 'menu')->with('child')->where('parent', 0)->orderBy('sort', 'ASC');
+        return $this->hasMany('Erendi\Menu\Models\MenuItems', 'menu')->with('child')->where('parent', 0)->orderBy('sort', 'ASC');
     }
 }
