@@ -270,8 +270,7 @@ $currentUrl = url()->current();
                                                                                                     value="{{ $role->$role_pk }}">
                                                                                                     {{ ucwords($role->$role_title_field) }}
                                                                                                 </option>
-                                                                                            @endfor
-                                                                                            each
+                                                                                            @endforeach
                                                                                         </select>
                                                                                     </label>
                                                                                 </p>
