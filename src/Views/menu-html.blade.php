@@ -15,7 +15,7 @@ $currentUrl = url()->current();
 
                             <div class="manage-menus">
                                 <form method="get" action="{{ $currentUrl }}">
-                                    <label for="menu" class="selected-menu">Select the menu you want to edit:</label>
+                                    <label for="menu" class="selected-menu">Pilih menu yang ingin di edit:</label>
 
                                     {!! Menu::select('menu', $menulist) !!}
 
@@ -23,7 +23,7 @@ $currentUrl = url()->current();
                                         <input type="submit" class="button-secondary" value="Choose">
                                     </span>
                                     <span class="add-new-menu-action"> or <a
-                                            href="{{ $currentUrl }}?action=edit&menu=0">Create new menu</a>. </span>
+                                            href="{{ $currentUrl }}?action=edit&menu=0">Menu baru</a>. </span>
                                 </form>
                             </div>
                             <div id="nav-menus-frame">
@@ -89,8 +89,8 @@ $currentUrl = url()->current();
                                                                     <p class="button-controls">
 
                                                                         <a href="#" onclick="addcustommenu()"
-                                                                            class="button-secondary submit-add-to-menu right">Add
-                                                                            menu item</a>
+                                                                            class="button-secondary submit-add-to-menu right">Tambah
+                                                                            item menu</a>
                                                                         <span class="spinner"
                                                                             id="spincustomu"></span>
                                                                     </p>
@@ -114,7 +114,7 @@ $currentUrl = url()->current();
                                                 <div id="nav-menu-header">
                                                     <div class="major-publishing-actions">
                                                         <label class="menu-name-label howto open-label" for="menu-name">
-                                                            <span>Name</span>
+                                                            <span>Nama</span>
                                                             <input name="menu-name" id="menu-name" type="text"
                                                                 class="menu-name regular-text menu-item-textbox"
                                                                 title="Enter menu name"
@@ -127,14 +127,14 @@ $currentUrl = url()->current();
                                                             <div class="publishing-action">
                                                                 <a onclick="createnewmenu()" name="save_menu"
                                                                     id="save_menu_header"
-                                                                    class="button button-primary menu-save">Create
+                                                                    class="button button-primary menu-save">Buat
                                                                     menu</a>
                                                             </div>
                                                         @elseif(request()->has("menu"))
                                                             <div class="publishing-action">
                                                                 <a onclick="getmenus()" name="save_menu"
                                                                     id="save_menu_header"
-                                                                    class="button button-primary menu-save">Save
+                                                                    class="button button-primary menu-save">Simpan
                                                                     menu</a>
                                                                 <span class="spinner" id="spincustomu2"></span>
                                                             </div>
@@ -143,7 +143,7 @@ $currentUrl = url()->current();
                                                             <div class="publishing-action">
                                                                 <a onclick="createnewmenu()" name="save_menu"
                                                                     id="save_menu_header"
-                                                                    class="button button-primary menu-save">Create
+                                                                    class="button button-primary menu-save">Buat
                                                                     menu</a>
                                                             </div>
                                                         @endif
@@ -153,12 +153,12 @@ $currentUrl = url()->current();
                                                     <div id="post-body-content">
 
                                                         @if (request()->has('menu'))
-                                                            <h3>Menu Structure</h3>
+                                                            <h3>Struktur Menu</h3>
                                                             <div class="drag-instructions post-body-plain" style="">
                                                                 <p>
-                                                                    Place each item in the order you prefer. Click on
-                                                                    the arrow to the right of the item to display more
-                                                                    configuration options.
+                                                                    Tempatkan setiap item dalam urutan yang Anda
+                                                                    inginkan. Klik panah di sebelah kanan item untuk
+                                                                    menampilkan lebih banyak opsi konfigurasi.
                                                                 </p>
                                                             </div>
 
@@ -166,8 +166,7 @@ $currentUrl = url()->current();
                                                             <h3>Menu Creation</h3>
                                                             <div class="drag-instructions post-body-plain" style="">
                                                                 <p>
-                                                                    Please enter the name and select "Create menu"
-                                                                    button
+                                                                    Silahkan input menu dan klik buat "Buat menu"
                                                                 </p>
                                                             </div>
                                                         @endif
@@ -341,19 +340,19 @@ $currentUrl = url()->current();
                                                             <div class="publishing-action">
                                                                 <a onclick="createnewmenu()" name="save_menu"
                                                                     id="save_menu_header"
-                                                                    class="button button-primary menu-save">Create
+                                                                    class="button button-primary menu-save">Buat
                                                                     menu</a>
                                                             </div>
                                                         @elseif(request()->has("menu"))
                                                             <span class="delete-action"> <a
                                                                     class="submitdelete deletion menu-delete"
                                                                     onclick="deletemenu()"
-                                                                    href="javascript:void(9)">Delete menu</a> </span>
+                                                                    href="javascript:void(9)">Hapus menu</a> </span>
                                                             <div class="publishing-action">
 
                                                                 <a onclick="getmenus()" name="save_menu"
                                                                     id="save_menu_header"
-                                                                    class="button button-primary menu-save">Save
+                                                                    class="button button-primary menu-save">Simpan
                                                                     menu</a>
                                                                 <span class="spinner" id="spincustomu2"></span>
                                                             </div>
@@ -362,7 +361,7 @@ $currentUrl = url()->current();
                                                             <div class="publishing-action">
                                                                 <a onclick="createnewmenu()" name="save_menu"
                                                                     id="save_menu_header"
-                                                                    class="button button-primary menu-save">Create
+                                                                    class="button button-primary menu-save">Buat
                                                                     menu</a>
                                                             </div>
                                                         @endif
