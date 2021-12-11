@@ -1,0 +1,31 @@
+{
+    "name": "erendi/menu",
+    "description": "Drag and Drop Menu Builder",
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "illuminate/support": "5.* || 6.* || 7.* || 8.*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Erendi\\Menu\\MenuServiceProvider"
+            ],
+            "aliases": {
+                "Menu": "Erendi\\Menu\\Facades\\Menu"
+            }
+        }
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Erendi\\Menu\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "arifiik",
+            "email": "bimacoding@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
